@@ -81,3 +81,4 @@ npm addUser --always-auth=true --registry={registry URL (.e.g https://registry.n
 # Content of the .npmrc file
 cat .npmrc
 ```
+// trigger
