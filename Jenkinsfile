@@ -30,8 +30,7 @@ pipeline {
     }
     post {
         always {
-            archiveArtifacts artifacts: 'semgrep-reports/**',
-                             allowEmptyArchive: true
+            archiveArtifacts artifacts: 'semgrep-reports/**', allowEmptyArchive: true
             emailext(
                 to: "${REPORT_EMAIL}",
                 subject: "Semgrep SAST | ${currentBuild.result} | ${env.JOB_NAME} #${env.BUILD_NUMBER}",
